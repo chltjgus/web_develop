@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load mathfilters %}
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+</head>
+<body>
+
+<h2>이름: {{name}}</h2>
+<h2>나이: {{age}}</h2>
+<br>
+
+ <!-- 이번달 if else문-->
+{% if month %}
+        <h2>이번달은 짝수입니다.</h2>
+{% else %}
+        <h2>이번달은 홀수입니다.</h2>
+{% endif %}
+
+<!--오늘 날짜 if else문-->
+{% if date %}
+        <h2>오늘의 날짜는 짝수입니다.</h2>
+{% else %}
+        <h2>오늘의 날짜는 홀수입니다.</h2>
+{% endif %}
+
+<br>
+<h2>first와 second의 합은 {{sum.sum}}입니다.</h2>
+<!--<h2>{{text}}</h2>-->
+
+<br>
+
+
+<!--구구단 생성 for문-->
+<!--<h2>구구단(짝수단)</h2>-->
+<!--<ul>-->
+<!--{% for i, j, k in data.item_list %}-->
+<!--        <li>{{i}} * {{j}} = {{k}}</li>-->
+<!--{% endfor %}-->
+
+<!--{% for i, j, k, flag in gugudan %}-->
+<!--    {% if flag %}-->
+<!--        <p><strong><i> {{i}} * {{j}} = {{k}} </i></strong></p><br>-->
+<!--    {% endif %}-->
+<!--{% endfor %}-->
+<!--</ul>-->
+
+
+<!-- 반복문 사용법 -->
+<!--{% for i in "x"|rjust:"9" %}-->
+<!--    <li>{{forloop.counter}}</li>-->
+<!--{% endfor %}-->
+
+
+<h2>대문자: {{string |upper}}</h2>
+<h2>소문자: {{string |lower}}</h2>
+<h2>단어수: {{string |wordcount}}</h2>
+<h2>길이: {{string |length}}</h2>
+
+<br>
+<h2>8 + 3 = {{8|add:3}}</h2>
+<h2>13 - 17 = {{13|sub:17}}</h2>
+
+{% with answer=42 %}
+<h2>42 * 0.5 = {{ answer|mul:mul_data }}</h2>
+{% endwith %}
+
+{% with numerator=12 denominator=3 %}
+<h2>12 / 3 = {{numerator|div:denominator }}</h2>
+{% endwith %}
+
+</body>
+</html>
