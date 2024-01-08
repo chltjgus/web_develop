@@ -12,5 +12,5 @@ urlpatterns = [
     # path('test/home/<int:year>/<int:month>/<int:day>', views.testDate, name='test2'),
     # path('test/home/<int:year>/<int:month>', views.testDate, name='test2'),
     # path('test/home/<int:year>', views.testDate, name='test2'),
-
+    path('human/', views.testHuman, name='testHuman')
 ]

@@ -36,16 +36,11 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-
-
-
-
-
-
     'django.contrib.staticfiles',
     'myapp.apps.MyappConfig',
     'account.apps.AccountConfig',
     'mathfilters',
+    'django.contrib.humanize',
 ]
 
 MIDDLEWARE = [

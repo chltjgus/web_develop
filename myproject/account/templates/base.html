@@ -1,7 +1,9 @@
 {% load static %}
+{% load mathfilters %}
+{% load humanize %}
+{% load custom_tags %}
 <!DOCTYPE html>
 <html lang="en">
-{% load mathfilters %}
 <head>
     <meta charset="UTF-8">
     <link rel = "stylesheet" href = "{% static 'css/style.css' %}"/>
@@ -16,6 +18,20 @@
 
     <br>
     <main>
+        <h1>{{ "very good!!" | check:"2024-01-05" }}</h1>
+        <br>
+        <br>
+
+        <h1>Current Date and Time</h1>
+        <h2>Right now: {% current_datetime "%Y-%m-%d %H:%M:%S" %}</h2>
+        <br>
+        <br>
+
+
+        <h2>사업자 번호 확인</h2>
+        <h2>{{ "" |checkNum }}</h2>
+
+
         {% block content %}
         <!-- 기본 콘텐츠 -->
         <button type="button" class="btn btn-primary">Primary</button>
