@@ -1,0 +1,33 @@
+{% load humanize %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <title>Humanize</title>
+</head>
+<body>
+   <h2><u>Humanize Data</u></h2>
+   <h3>1) intcomma</h3>
+   <p>{{ comma }} translates to {{ comma | intcomma }} 입니다.</p>
+   <hr>
+   <h3>2) intword</h3>
+   <p>{{ word }} translates to {{ word | intword }}</p>
+   <hr>
+   <h3>3) naturalday</h3>
+   <p>Current time is: {{ current_time }}</p>
+   <p>naturalday is: {{ current_time | naturalday }}</p>
+   <p>naturaltime is: {{ current_time | naturaltime }}</p>
+   <hr>
+   <h3>4) ordinal</h3>
+   <p>Ordinal of {{ number1 }} is {{ number1 | ordinal }}</p>
+   <p>Ordinal of {{ number2 }} is {{ number2 | ordinal }}</p>
+   <hr>
+   <h3>5) naturalday</h3>
+   <p>{{ yesterday }}는 {{ yesterday | naturalday }}</p>
+   <hr>
+   <h3>6) naturaltime</h3>
+   <p>{{ tomorrow }}는 {{ tomorrow | naturaltime }}</p>
+   <hr>
+
+</body>
+</html>
